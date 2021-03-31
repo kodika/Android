@@ -362,7 +362,7 @@ internal extension AndroidTab {
     struct JNICacheTab {
         
         /// JNI Java class signature
-        static let classSignature = SupportDesign.Widget.className(["TabLayout$Tab"])
+        static let classSignature = SupportDesign.Tabs.className(["TabLayout$Tab"])
         
         /// JNI Java class name
         static let className = classSignature.rawValue

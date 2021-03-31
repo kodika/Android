@@ -603,7 +603,7 @@ internal extension AndroidTabLayout {
     struct JNICacheTabLayout {
         
         /// JNI Java class signature
-        static let classSignature = SupportDesign.Widget.className(["TabLayout"])
+        static let classSignature = SupportDesign.Tabs.className(["TabLayout"])
         
         /// JNI Java class name
         static let className = classSignature.rawValue

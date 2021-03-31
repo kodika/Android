@@ -137,7 +137,7 @@ public extension AndroidBottomNavigationView {
         JNIMethod.CallVoidMethod(
             object: javaObject,
             methodName: "setOnNavigationItemSelectedListener",
-            methodSig: "(Landroid/support/design/widget/BottomNavigationView$OnNavigationItemSelectedListener;)V",
+            methodSig: "(Lcom/google/android/material/bottomnavigation/BottomNavigationView$OnNavigationItemSelectedListener;)V",
             methodCache: &JNICacheBottomBar.MethodID.setOnNavigationItemSelectedListener,
             args: &__args,
             locals: &__locals )
@@ -150,7 +150,7 @@ internal extension AndroidBottomNavigationView {
     struct JNICacheBottomBar {
         
         /// JNI Java class signature
-        static let classSignature = SupportDesign.Widget.className(["BottomNavigationView"])
+        static let classSignature = SupportDesign.BottomNavigation.className(["BottomNavigationView"])
         
         /// JNI Java class name
         static let className = classSignature.rawValue

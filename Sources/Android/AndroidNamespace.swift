@@ -90,7 +90,7 @@ public enum Android: JavaPackage {
 
 public enum SupportV7: JavaPackage {
     
-    public static let package: JNIPackage = ["android", "support", "v7"]
+    public static let package: JNIPackage = ["androidx", "appcompat"]
     
     public enum Widget: JavaPackage {
         
@@ -105,7 +105,7 @@ public enum SupportV7: JavaPackage {
 
 public enum SupportV4: JavaPackage {
     
-    public static let package: JNIPackage = ["android", "support", "v4"]
+    public static let package: JNIPackage = ["androidx", "core"]
     
     public enum Widget: JavaPackage {
         
@@ -135,7 +135,15 @@ public enum SupportV4: JavaPackage {
 
 public enum SupportDesign: JavaPackage {
     
-    public static let package: JNIPackage = ["android", "support", "design"]
+    public static let package: JNIPackage = ["com","google","android", "material"]
+    
+    public enum BottomNavigation: JavaPackage {
+        public static let package: JNIPackage = SupportDesign.package + ["bottomnavigation"]
+    }
+    
+    public enum Tabs: JavaPackage {
+        public static let package: JNIPackage = SupportDesign.package + ["tabs"]
+    }
     
     public enum Widget: JavaPackage {
         

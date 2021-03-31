@@ -356,7 +356,7 @@ public extension AndroidToolbar {
         JNIMethod.CallVoidMethod(
             object: javaObject,
             methodName: "setOnMenuItemClickListener",
-            methodSig: "(Landroid/support/v7/widget/Toolbar$OnMenuItemClickListener;)V",
+            methodSig: "(Landroidx/appcompat/widget/Toolbar$OnMenuItemClickListener;)V",
             methodCache: &ToolbarJNICache.MethodID.setOnMenuItemClickListener,
             args: &__args,
             locals: &__locals )
