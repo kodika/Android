@@ -7,8 +7,8 @@ let package = Package(
         .library(name: "Android", targets: ["Android"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/PureSwift/java_util.git", .branch("master")),
-        .package(url: "https://github.com/PureSwift/JNI.git", .branch("master")),
+        .package(url: "https://github.com/kodika/java_util.git", .branch("master")),
+        .package(url: "https://github.com/kodika/JNI.git", .branch("master")),
     ],
     targets: [
         .target(
