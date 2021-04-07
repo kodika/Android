@@ -49,7 +49,7 @@ open class AndroidViewGroup: AndroidView {
             args: &__args,
             locals: &__locals )
         
-        super.javaObject = __object
+        self.javaObject = __object
         
         JNI.DeleteLocalRef( __object )
     }
