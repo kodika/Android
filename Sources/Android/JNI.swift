@@ -45,9 +45,9 @@ extension JNINativeMethod {
 
 // MARK: - JNIListener
 
-internal protocol JNIListener: class, JavaProtocol { }
+public protocol JNIListener: class, JavaProtocol { }
 
-internal extension JNIListener {
+public extension JNIListener {
     
     static fileprivate func recoverPointer( _ swiftObject: jlong, _ file: StaticString = #file, _ line: Int = #line ) -> uintptr_t {
         #if os(Android)
@@ -61,11 +61,11 @@ internal extension JNIListener {
         return swiftPointer
     }
     
-    internal func swiftValue() -> jvalue {
+    public func swiftValue() -> jvalue {
         return jvalue( j: jlong(unsafeBitCast(Unmanaged.passRetained(self), to: uintptr_t.self)) )
     }
     
-    internal func takeOwnership( javaObject: jobject?, _ file: StaticString = #file, _ line: Int = #line ) {
+    public func takeOwnership( javaObject: jobject?, _ file: StaticString = #file, _ line: Int = #line ) {
         
         guard javaObject != nil else { return }
         var locals = [jobject]()
@@ -87,15 +87,15 @@ internal extension JNIListener {
         }
     }
     
-    internal static func swiftObject(from pointer: jlong) -> Self? {
+    public static func swiftObject(from pointer: jlong) -> Self? {
         
         return unsafeBitCast( recoverPointer( pointer ), to: Self.self )
     }
 }
 
-internal extension JNIListener where Self: JavaObject  {
+public extension JNIListener where Self: JavaObject  {
     
-    internal static func release(swiftObject: jlong) {
+    public static func release(swiftObject: jlong) {
         
         let toRelease = unsafeBitCast( recoverPointer( swiftObject ), to: JavaObject.self )
         
